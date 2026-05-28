@@ -1,0 +1,16 @@
+Test     Lag (samples)    Offset (ms)    Leading
+----------------------------------------------------------
+test1    -11                 -0.23 ms      pi101
+test2    -19                 -0.40 ms      pi101
+test3    9                   +0.19 ms      pi100
+test4    -16                 -0.33 ms      pi101
+test5    -16                 -0.33 ms      pi101
+test6    -16                 -0.33 ms      pi101
+test7    38                  +0.79 ms      pi100
+test8    -18                 -0.38 ms      pi101
+test9    -12                 -0.25 ms      pi101
+test10   38                  +0.79 ms      pi100
+----------------------------------------------------------
+Mean:   -0.05 ms
+Std:    0.45 ms
+Range:  -0.40 ms  to  +0.79 ms

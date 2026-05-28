@@ -29,8 +29,12 @@ wav files will be created on pi's
 /home/mic1/[filename_arg].wav
 
 
-check chrony status
-get current time
-define start_time = current_time + 5s
-run local_record_script ( start_time) via ssh
+record_precise
 
+sudo apt install libportaudio2
+pip install sounddevice --break-system-packages
+sudo apt install python3-scipy python3-numpy
+
+
+python -m pip install scipy numpy   # once on laptop for measure automation
+python analyze_sync.py

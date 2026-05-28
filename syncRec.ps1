@@ -32,8 +32,8 @@ $p2.WaitForExit()
 Get-Content .\pi1.txt
 Get-Content .\pi1.err
 "Pi2:"
-Get-Content .\pi1.txt
-Get-Content .\pi1.err
+Get-Content .\pi2.txt
+Get-Content .\pi2.err
 
 
 #Write-Host "Pi1 Time : $result1"
