@@ -1,0 +1,36 @@
+1. install chrony - NTP clock sync service
+sudo apt update
+sudo apt install chrony
+
+2. set Pi1 as server via /etc/chrony/chrony.config
+add
+allow 192.168.0.101/24 (for each allowed client)
+local stratum 8
+
+3. set Pi2 as client via /etc/chrony/chrony.config
+comment/delete # pool 2.debian.pool.ntp.org iburst
+add
+server 192.168.0.100 iburst
+
+4. restart service on all devices
+
+5. check all clients are using configured server as host with:
+chronyc sources -v
+check output has:
+^* 192.168.0.100 (server's_ip)
+
+6. make sure all clients has /home/mic1/record.py
+and ssh configured via laptop
+
+7. run 
+
+Record Script syncRec.ps1 [filename_arg]
+wav files will be created on pi's
+/home/mic1/[filename_arg].wav
+
+
+check chrony status
+get current time
+define start_time = current_time + 5s
+run local_record_script ( start_time) via ssh
+
